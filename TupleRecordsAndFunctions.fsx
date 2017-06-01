@@ -25,3 +25,24 @@ let BmiInWords (name:string) (bmi:double) =
 let LetsTryLamdaInFSharp = fun x -> x + 10
 //same thing as
 let LetsTryLamdaInFSharpII x = x + 10
+
+
+type ABmi = {Name:string;Weight:double;Height:double}
+
+type ABmiStacked =
+    {
+        Name:string
+        Age:int
+        Weight:double
+        Height:double
+    }
+
+let JamesBmi = {Name="James";Age=25; Weight=70.0; Height=1.8}
+let CathysBmi =
+    {
+        Name="Cathy"
+        Weight=69.0
+        Height=1.67
+    }
+
+let CathysNewWeight={CathysBmi with Weight=60.0}
