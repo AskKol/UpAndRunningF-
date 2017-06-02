@@ -5,14 +5,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>4edb8390-8b42-48c4-9524-dea0d7d56883</ProjectGuid>
+    <ProjectGuid>0756a62b-859b-4839-becf-5c8856a713e9</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>SampleCalculator</RootNamespace>
-    <AssemblyName>SampleCalculator</AssemblyName>
+    <RootNamespace>Data.fs</RootNamespace>
+    <AssemblyName>Data.fs</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.4.1.0</TargetFSharpCoreVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Name>SampleCalculator</Name>
+    <Name>Data.fs</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,13 +51,9 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Calculator.fs" />
+    <Compile Include="Library1.fs" />
     <None Include="Script.fsx" />
     <Content Include="packages.config" />
-    <Compile Include="CalculatorWithTupleHistory.fs" />
-    <None Include="ImprovedCalculatorScript.fsx" />
-    <Compile Include="CalculatorWithRecordHistory.fs" />
-    <None Include="ImprovedCalculatorWithRecordScript.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
