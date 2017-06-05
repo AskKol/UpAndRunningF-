@@ -16,3 +16,17 @@ open SimpleMonopoly.Types
                 Data.Board.[newIndex % Data.Board.Length]
             | None -> Go  
 
+
+        let calculateEarnings (position:Types.Position) = 
+            match position with
+            | Property "Euston Road" | Property "Marylebone Road" -> Some(Earn 150) 
+            | Property _ -> Some(Pay 100)
+            | Jail -> Some Bankrupt
+            | Go -> Some(Earn 500)
+            | FreeParking -> Some(Earn 250)
+            |_ -> None
+        
+        let move dice position =
+            let newPosition = calculateNextMove dice position
+            let earnings = calculateEarnings newPosition
+            newPosition, earnings
